@@ -125,7 +125,6 @@ function tickTween(d,indx){
               socket.emit('score',obj);
               updateScore(d.r);
             }
-            socket.emit('removeBomb',d.id);
             element.attr("fill-opacity","100%").transition().duration(100).attr("r",0).attr("fill-opacity","50%").remove();
           }else{
             
@@ -137,7 +136,6 @@ function tickTween(d,indx){
               socket.emit('health',obj);
               updateHealth(h_update);
             } 
-            socket.emit('removeBomb',d.id);
             element.attr("fill-opacity","100%").transition().duration(100).attr("r",15).attr("fill-opacity","50%").remove();
           }
         }
