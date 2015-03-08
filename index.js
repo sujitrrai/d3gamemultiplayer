@@ -65,6 +65,7 @@ io.on('connection', function(socket){
 			console.log(data);
 			bombs.push(data);
 			io.emit('bombs',bombs);
+			bombs = [];
 		});
 		socket.on('announce',function(data){
 			console.log(data);
